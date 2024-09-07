@@ -7,8 +7,9 @@ secret_key = os.getenv('SECRET_KEY')
 
 # Initialize the cookie manager
 cookies = EncryptedCookieManager(
-    prefix='mood_tracking_app',
-    secret_key=secret_key)
+    prefix="mood_tracking_app",
+    password=os.environ.get("secret_key", secret_key)
+)
 
 if not cookies.ready():
     st.stop()
