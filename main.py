@@ -2,18 +2,11 @@ import streamlit as st
 from streamlit_cookies_manager import EncryptedCookieManager
 import uuid
 
-try:
-    with open('/run/secrets/cookies-password', 'r') as file:
-        password = file.read().strip()
-except FileNotFoundError:
-    st.error("Secret file not found.")
-except IOError as e:
-    st.error(f"Error reading secret file: {e}")
 
 # Initialize the cookie manager
 cookies = EncryptedCookieManager(
     prefix='mood_tracking_app',
-    password=password)
+    password='Mood123467')
 
 if not cookies.ready():
     st.stop()
