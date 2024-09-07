@@ -2,8 +2,8 @@ import streamlit as st
 from streamlit_cookies_manager import EncryptedCookieManager
 import uuid
 
-with open('/run/secrets/password.txt') as f:
-    password = f.read().strip()
+with open('/run/secrets/cookies-password', 'r') as file:
+    password = file.read().strip()
 
 # Initialize the cookie manager
 cookies = EncryptedCookieManager(
