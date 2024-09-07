@@ -1,13 +1,9 @@
 import streamlit as st
 from streamlit_cookies_manager import EncryptedCookieManager
 import uuid
-from dotenv import load_dotenv
-import os
 
-# Load environment variables from .env file
-load_dotenv()
-
-password = os.getenv('password')
+with open('/run/secrets/password_secret') as f:
+    password = f.read().strip()
 
 # Initialize the cookie manager
 cookies = EncryptedCookieManager(
