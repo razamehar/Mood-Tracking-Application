@@ -7,10 +7,7 @@ import os
 # Load environment variables from .env file
 load_dotenv()
 
-load_dotenv()
 password = os.getenv('password')
-st.write(f"Loaded password: {password}")  # Debug line
-
 
 # Initialize the cookie manager
 cookies = EncryptedCookieManager(
