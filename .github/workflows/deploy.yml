@@ -1,0 +1,20 @@
+name: Example Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up environment variables
+        run: echo "SECRET_PASSWORD=${{ secrets.cookies_password }}" >> $GITHUB_ENV
+
+      - name: Run script
+        run: python main.py

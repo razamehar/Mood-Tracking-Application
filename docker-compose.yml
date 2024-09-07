@@ -2,13 +2,14 @@ version: '3.4'
 
 services:
   moodtrackingapplication:
-    image: moodtrackingapplication
+    image: moodtrackingapplication  
     build:
       context: .
       dockerfile: ./Dockerfile
+    environment:
+      COOKIES_PASSWORD_FILE: /run/secrets/cookies-password
     secrets:
       - cookies-password
-
 
 secrets:
   cookies-password:
