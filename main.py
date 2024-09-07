@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_cookies_manager import EncryptedCookieManager
 import uuid
+import os
 
 password = os.getenv('SECRET_PASSWORD')
 
