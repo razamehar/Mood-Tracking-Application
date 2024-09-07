@@ -1,11 +1,19 @@
 import streamlit as st
 from streamlit_cookies_manager import EncryptedCookieManager
 import uuid
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Get the password from environment variables
+password = os.getenv('password')
 
 # Initialize the cookie manager
 cookies = EncryptedCookieManager(
     prefix='mood_tracking_app',
-    password="mood123456")
+    password=password)
 
 if not cookies.ready():
     st.stop()
