@@ -1,0 +1,62 @@
+import streamlit as st
+import random
+
+quotes = [
+    "Positive anything is better than negative nothing. — Elbert Hubbard",
+    "The only limit to our realization of tomorrow is our doubts of today. — Franklin D. Roosevelt",
+    "Believe you can and you're halfway there. — Theodore Roosevelt",
+    "You are never too old to set another goal or to dream a new dream. — C.S. Lewis",
+    "In the middle of every difficulty lies opportunity. — Albert Einstein",
+    "Happiness is not something ready made. It comes from your own actions. — Dalai Lama",
+    "The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty. — Winston Churchill",
+    "Start each day with a positive thought and a grateful heart. — Roy T. Bennett",
+    "Positive thinking will let you do everything better than negative thinking will. — Zig Ziglar",
+    "You do not find the happy life. You make it. — Camilla E. Kimball",
+    "Act as if what you do makes a difference. It does. — William James",
+    "The best way to predict the future is to create it. — Peter Drucker",
+    "Your attitude, not your aptitude, will determine your altitude. — Zig Ziglar",
+    "Be not afraid of life. Believe that life is worth living, and your belief will help create the fact. — William James",
+    "When you arise in the morning think of what a privilege it is to be alive, to think, to enjoy, to love... then make that day count! — Steve Maraboli",
+    "Keep your face to the sunshine and you cannot see a shadow. — Helen Keller",
+    "The sun himself is weak when he first rises, and gathers strength and courage as the day gets on. — Charles Dickens",
+    "You are the average of the five people you spend the most time with. — Jim Rohn",
+    "We may encounter many defeats but we must not be defeated. — Maya Angelou",
+    "It does not matter how slowly you go as long as you do not stop. — Confucius",
+    "The only way to do great work is to love what you do. — Steve Jobs",
+    "Life is either a daring adventure or nothing at all. — Helen Keller",
+    "You miss 100% of the shots you don't take. — Wayne Gretzky",
+    "Success is not final, failure is not fatal: It is the courage to continue that counts. — Winston Churchill",
+    "The future belongs to those who believe in the beauty of their dreams. — Eleanor Roosevelt",
+    "Don’t watch the clock; do what it does. Keep going. — Sam Levenson",
+    "Be yourself; everyone else is already taken. — Oscar Wilde",
+    "Your time is limited, don't waste it living someone else's life. — Steve Jobs",
+    "If you want to lift yourself up, lift up someone else. — Booker T. Washington",
+    "The only impossible journey is the one you never begin. — Tony Robbins",
+    "Don’t count the days, make the days count. — Muhammad Ali",
+    "The best revenge is massive success. — Frank Sinatra",
+    "Success is not how high you have climbed, but how you make a positive difference to the world. — Roy T. Bennett",
+    "You are braver than you believe, stronger than you seem, and smarter than you think. — A.A. Milne",
+    "The way to get started is to quit talking and begin doing. — Walt Disney",
+    "Change your thoughts and you change your world. — Norman Vincent Peale",
+    "You have within you right now, everything you need to deal with whatever the world can throw at you. — Brian Tracy",
+    "Everything has beauty, but not everyone can see. — Confucius",
+    "The secret of getting ahead is getting started. — Mark Twain",
+    "Success usually comes to those who are too busy to be looking for it. — Henry David Thoreau",
+    "You do not find the happy life. You make it. — Camilla E. Kimball",
+    "Perseverance is not a long race; it is many short races one after the other. — Walter Elliot",
+    "Opportunities don't happen, you create them. — Chris Grosser",
+    "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart. — Roy T. Bennett",
+    "The only way to achieve the impossible is to believe it is possible. — Charles Kingsleigh",
+    "Positive thoughts lead to positive outcomes. — Unknown",
+    "Everything you’ve ever wanted is on the other side of fear. — George Addair",
+    "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle. — Christian D. Larson",
+    "You have to be at your strongest when you’re feeling at your weakest. — Unknown",
+    "The difference between a successful person and others is not a lack of strength, not a lack of knowledge, but rather a lack in will. — Vince Lombardi",
+    "Keep going. Everything you need will come to you at the perfect time. — Unknown",
+    "The only way to achieve greatness is to step out of your comfort zone. — Unknown"
+]
+
+
+quote = random.choice(quotes)
+st.title('_:blue[Mood Enhancer]_ of the Day')
+st.write(quote)

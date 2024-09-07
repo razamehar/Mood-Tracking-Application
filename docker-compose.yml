@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  moodtrackingapplication:
+    image: moodtrackingapplication
+    build:
+      context: .
+      dockerfile: ./Dockerfile
