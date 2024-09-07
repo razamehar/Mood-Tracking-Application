@@ -1,0 +1,22 @@
+name: Example Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run with secret
+        run: echo "Using the secret: ${{ secrets.cookies_password }}"
+
+      # Example of using a secret to authenticate with a service
+      - name: Authenticate to a service
+        run: |
+          curl -H "Authorization: Bearer ${{ secrets.YOUR_SECRET_NAME }}" https://api.example.com/deploy
