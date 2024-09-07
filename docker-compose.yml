@@ -6,3 +6,10 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    secrets:
+      - cookies-password
+
+
+secrets:
+  cookies-password:
+    external: true
