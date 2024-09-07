@@ -6,9 +6,3 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    secrets:
-      - password_secret
-
-secrets:
-  password_secret:
-    file: ./password.txt
