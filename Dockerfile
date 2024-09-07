@@ -20,8 +20,5 @@ COPY . /app
 RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
 USER appuser
 
-# Copy password.txt to /run/secrets/
-COPY password.txt /run/secrets/password.txt
-
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
 CMD ["streamlit", "run", "main.py"]
