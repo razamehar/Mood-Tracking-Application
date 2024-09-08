@@ -3,12 +3,11 @@ from streamlit_cookies_manager import EncryptedCookieManager
 import uuid
 import os
 
-secret_key = os.environ.get('SECRET_KEY')
 
 # Initialize the cookie manager
 cookies = EncryptedCookieManager(
     prefix="mood_tracking_app",
-    password=secret_key)
+    password="Mood1234")
 
 
 if not cookies.ready():
